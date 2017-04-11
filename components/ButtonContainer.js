@@ -42,9 +42,17 @@ class ButtonContainer extends Component {
 		return (
 			<div className="button-container pure-g">
 				<div className="pure-u-1-2">
-        			<span className="plus-icon" onClick={this.onIncrement}>+</span>
-        			<span className="minus-icon" onClick={this.onDecrement}>-</span>
-        			<input type="text" name="quantity" value={quantity}  onChange= {this.readText} />
+        			<div className="pure-g">
+        				<div className="pure-u-1-5">
+        					<span className="plus-icon" onClick={this.onIncrement}></span>
+        				</div>
+        				<div className="pure-u-3-5">
+        					<input type="text" name="quantity" value={quantity}  onChange= {this.readText} />
+        				</div>
+        				<div className="pure-u-1-5">
+        					<span className="minus-icon" onClick={this.onDecrement}></span>
+        				</div>
+        			</div>
         		</div>
         		<div className="pure-u-1-2">
         			<input type="button" name="cancel" value="Cancel" className="pure-button cancel"  onClick={this.onCancelClick} />
