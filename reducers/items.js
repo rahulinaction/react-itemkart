@@ -1,5 +1,6 @@
 const item = (state = {}, action) => {
   switch (action.type) {
+
     case 'ADD_ITEM':
       return {
         id: action.id,
@@ -7,7 +8,6 @@ const item = (state = {}, action) => {
         desc: action.desc,
         quantity: 0
       }
-
 
     case 'OPEN_CART':
       if (state.id !== action.id) {
@@ -28,7 +28,7 @@ const item = (state = {}, action) => {
       })
 
     case 'INCREMENT_QUANTITY':
-      if (state.id !== action.id) {
+      if (state.id !== action.id || state.quantity <=0 ) {
         return state
       };
       
@@ -37,7 +37,7 @@ const item = (state = {}, action) => {
       })
 
     case 'DECREMENT_QUANTITY':
-      if (state.id !== action.id) {
+      if (state.id !== action.id || state.quantity <=0 ) {
         return state
       }
 
