@@ -4,7 +4,6 @@ import items from './items'
 
 const itemsKartApp = combineReducers({
   items
-  //visibilityFilter
 })
 
 export default itemsKartApp
