@@ -30,8 +30,8 @@ const item = (state = {}, action) => {
     case 'INCREMENT_QUANTITY':
       if (state.id !== action.id) {
         return state
-      }
-
+      };
+      
       return Object.assign({}, state, {
         quantity: state.quantity+1
       })

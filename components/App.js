@@ -1,9 +1,11 @@
 import React from 'react'
+import Counter from './Counter'
 import ItemList from './ItemList'
-const App = () => (
+const App = () => (	
   <div className="main-container">
-  	<h1>ItemsKart</h1>
-  	<ItemList />
+	<h1>ItemsKart</h1>
+	<Counter />
+	<ItemList />
   </div>
 )
 

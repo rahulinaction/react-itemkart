@@ -21,7 +21,6 @@ const ItemList = ({ items, dispatch }) => (
         }}
 
         onIncrement = {(itemId) =>{
-            console.log("came here",itemId);
             dispatch(incrementQuantity(itemId));
         }}
 
